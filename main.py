@@ -43,6 +43,9 @@ def val():
 
     print(data["value"])
 
+    if connected_client:
+        connected_client.send(data["value"])
+
     return jsonify({
         "ok":"ok"
     })
@@ -52,15 +55,6 @@ def val():
 def led_on():
     if connected_client:
         connected_client.send("LED_ON")
-        return "Command sent"
-
-    return "ESP32 not connected", 503
-
-
-@app.route("/led/off")
-def led_off():
-    if connected_client:
-        connected_client.send("LED_OFF")
         return "Command sent"
 
     return "ESP32 not connected", 503
