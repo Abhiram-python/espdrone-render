@@ -40,7 +40,7 @@ document.addEventListener("pointermove", (ev) => {
 
         console.log(ev.clientY - ojoy_oy)
 
-        remotetest(ev.clientY-ojoy_oy + topV)
+        remotetest(ev.clientY-ojoy_oy + topv)
     }
 
     else if (ev.pointerId === fjoy_pointerId) {
