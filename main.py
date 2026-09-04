@@ -41,10 +41,10 @@ def home():
 def val():
     data=request.get_json()
 
-    print(data["value"])
+    # print(data["value"])
 
     if connected_client:
-        connected_client.send(data["value"])
+        connected_client.send(data["o"],data["jx"],data["jy"])
 
     return jsonify({
         "ok":"ok"

@@ -9,7 +9,7 @@ var fjoy=document.getElementById("fjoy")
 let ojoy_pointerId = null;
 let fjoy_pointerId = null;
 
-async function remotetest(v){
+async function remotetest(o,jx,jy){
     
     const res=await fetch("https://espdrone-render.onrender.com/value",{
 
@@ -18,7 +18,9 @@ async function remotetest(v){
         "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            value:v
+            o:o,
+            jx:jx,
+            jy:jy
         })
 
     })
@@ -40,7 +42,7 @@ document.addEventListener("pointermove", (ev) => {
 
         console.log(ev.clientY - ojoy_oy)
 
-        // remotetest(ojoy.style.top.slice(0,-2))
+        remotetest(ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2))
     }
 
     else if (ev.pointerId === fjoy_pointerId) {
@@ -65,7 +67,7 @@ document.addEventListener("pointermove", (ev) => {
             fjoy.style.top = `${ev.clientY - fjoy_oy}px`
         }
 
-        remotetest(fjoy.style.top.slice(0,-2))
+        remotetest(ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2))
     }
 })
 
