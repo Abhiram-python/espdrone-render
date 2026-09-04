@@ -66,8 +66,8 @@ body{
 }
 
 #ojoy{
-    width:20px;
-    height:20px;
+    width:40px;
+    height:40px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
     flex:0 0 auto;
