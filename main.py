@@ -2,6 +2,8 @@ from flask import Flask,render_template,request, jsonify
 from flask_sock import Sock
 import time
 
+import json
+
 app = Flask(__name__, template_folder="templates", static_folder="static")
 sock = Sock(app)
 
@@ -44,7 +46,7 @@ def val():
     # print(data["value"])
 
     if connected_client:
-        connected_client.send(data["o"],data["jx"],data["jy"])
+        connected_client.send(json.dumps(data))
 
     return jsonify({
         "ok":"ok"
