@@ -40,7 +40,7 @@ document.addEventListener("pointermove", (ev) => {
 
         console.log(ev.clientY - ojoy_oy)
 
-        remotetest(ev.clientY-ojoy_oy + topv)
+        // remotetest(ojoy.style.top.slice(0,-2))
     }
 
     else if (ev.pointerId === fjoy_pointerId) {
@@ -64,6 +64,8 @@ document.addEventListener("pointermove", (ev) => {
         else {
             fjoy.style.top = `${ev.clientY - fjoy_oy}px`
         }
+
+        remotetest(fjoy.style.top.slice(0,-2))
     }
 })
 
