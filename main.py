@@ -46,7 +46,7 @@ def val():
     # print(data["value"])
 
     if connected_client:
-        connected_client.send(f"{int(data["o"])},{int(data["jx"])},{int(data["jy"])}")
+        connected_client.send(f"{data["o"]},{data["jx"]},{data["jy"]}")
 
     return jsonify({
         "ok":"ok"
