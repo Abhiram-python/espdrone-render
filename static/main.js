@@ -50,7 +50,7 @@ document.addEventListener("pointermove", (ev) => {
 
         console.log(ojoy.style.top.slice(0,-2))
 
-        remotetest(200-ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2),m1.style.top.slice(0,-2),m2.style.top.slice(0,-2))
+        remotetest(ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2),m1.style.top.slice(0,-2),m2.style.top.slice(0,-2))
     }
 
     else if (ev.pointerId === m1_pointerId) {
@@ -66,7 +66,7 @@ document.addEventListener("pointermove", (ev) => {
 
         console.log(m1.style.top.slice(0,-2))
 
-        remotetest(200-ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2),m1.style.top.slice(0,-2),m2.style.top.slice(0,-2))
+        remotetest(ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2),m1.style.top.slice(0,-2),m2.style.top.slice(0,-2))
 
     }
 
@@ -83,7 +83,7 @@ document.addEventListener("pointermove", (ev) => {
 
         console.log(m2.style.top.slice(0,-2))
 
-        remotetest(200-ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2),m1.style.top.slice(0,-2),m2.style.top.slice(0,-2))
+        remotetest(ojoy.style.top.slice(0,-2),fjoy.style.left.slice(0,-2),fjoy.style.top.slice(0,-2),m1.style.top.slice(0,-2),m2.style.top.slice(0,-2))
 
     }
 
