@@ -1,4 +1,4 @@
-var topv
+var topv,topvm1,topvm2
 var ojoy_oy,m1_oy,m2_oy
 var fjoy_ox,fjoy_oy
 
@@ -54,14 +54,14 @@ document.addEventListener("pointermove", (ev) => {
     }
 
     else if (ev.pointerId === m1_pointerId) {
-        if (ev.clientY - m1_oy + topv > 100) {
+        if (ev.clientY - m1_oy + topvm1 > 100) {
             m1.style.top = `${100}px`
         }
-        else if (ev.clientY - m1_oy + topv < 0) {
+        else if (ev.clientY - m1_oy + topvm1 < 0) {
             m1.style.top = `${0}px`
         }
         else {
-            m1.style.top = `${ev.clientY - m1_oy + topv}px`
+            m1.style.top = `${ev.clientY - m1_oy + topvm1}px`
         }
 
         console.log(m1.style.top.slice(0,-2))
@@ -71,14 +71,14 @@ document.addEventListener("pointermove", (ev) => {
     }
 
     else if (ev.pointerId === m2_pointerId) {
-        if (ev.clientY - m2_oy + topv > 100) {
+        if (ev.clientY - m2_oy + topvm2 > 100) {
             m2.style.top = `${100}px`
         }
-        else if (ev.clientY - m2_oy + topv < 0) {
+        else if (ev.clientY - m2_oy + topvm2 < 0) {
             m2.style.top = `${0}px`
         }
         else {
-            m2.style.top = `${ev.clientY - m2_oy + topv}px`
+            m2.style.top = `${ev.clientY - m2_oy + topvm2}px`
         }
 
         console.log(m2.style.top.slice(0,-2))
@@ -131,14 +131,14 @@ fjoy.addEventListener("pointerdown", (ev) => {
 m1.addEventListener("pointerdown", (ev) => {
     m1_pointerId = ev.pointerId;
     m1_oy = ev.clientY;
-    topv = parseInt(window.getComputedStyle(m1).top, 10);
+    topvm1 = parseInt(window.getComputedStyle(m1).top, 10);
     m1.setPointerCapture(ev.pointerId);
 })
 
 m2.addEventListener("pointerdown", (ev) => {
     m2_pointerId = ev.pointerId;
     m2_oy = ev.clientY;
-    topv = parseInt(window.getComputedStyle(m2).top, 10);
+    topvm2 = parseInt(window.getComputedStyle(m2).top, 10);
     m2.setPointerCapture(ev.pointerId);
 })
 
