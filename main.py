@@ -45,8 +45,11 @@ def val():
 
     # print(data["value"])
 
-    if connected_client:
-        connected_client.send(f"{data["o"]},{data["jx"]},{data["jy"]}")
+    # if connected_client:
+    #     connected_client.send(f"{data["o"]},{data["jx"]},{data["jy"]},{data["m1"]},{data["m2"]}")
+
+    for i,k in enumerate(data.items()):
+        connected_client.send(f"{k[0]}{k[1]}")
 
     return jsonify({
         "ok":"ok"

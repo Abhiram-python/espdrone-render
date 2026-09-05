@@ -13,27 +13,67 @@ body{
 
 #con-con{
     width:80%;
-    height:300px;
+    /* height:300px; */
     /* border:2px solid white; */
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     position: relative;
     background-color: black;
+    padding:40px 20px;
+    gap:20px;
+    box-shadow: 0 0 20px 1px rgb(57, 57, 57);
     /* background-image: linear-gradient(to bottom right,rgb(72, 72, 72),black); */
 }
 
-#con-con::after{
+#controls{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#motor-controls{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.mc{
+    display:flex;
+    flex-direction:column;
+    color:white;
+    align-items: center;
+    font-family: "Orbitron", sans-serif;
+    gap:20px
+}
+
+.pin{
+    width:2px;
+    height:100px;
+    background-color:white;
+}
+
+.mover{
+    width:30px;
+    height:30px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top:100%;
+    transform:translate(-50%,-50%);
+    box-shadow: 0 0 2px 2px grey;
+    /* transform:translate(-50%,-50%) */
+}
+
+/* #con-con::after{
     content:"";
     position: absolute;
     width:100%;
     height:100%;
-    /* background-color: rgb(255, 255, 255); */
-    /* background: conic-gradient(blue,aqua,blue); */
-    /* background: conic-gradient(from 0deg, #00c6ff, #0072ff, #005bea, #0040c1, #00c6ff); */
     background: conic-gradient(from 0deg, #ff00c8, #00ffe7, #00ff0a, #ffe600, #ff00c8);
-    /* background: conic-gradient(from 0deg, red, orange, yellow, lime, cyan, blue, violet, red); */
 
     border-radius: 10px;
     padding:2px;
@@ -41,7 +81,7 @@ body{
     top:-2px;
     z-index: -1;
     filter: blur(10px);
-}
+} */
 
 /* #con-con::before{
     content:"";
@@ -62,7 +102,7 @@ body{
     background-color: rgb(155, 155, 155);
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 #ojoy{
@@ -72,8 +112,10 @@ body{
     border-radius: 50%;
     flex:0 0 auto;
     position: relative;
-    left: -20px;
-    top:0px;
+    top:100%;
+    transform:translate(-50%,-50%);
+    /* left: -20px;
+    top:0px; */
     touch-action: none;
     /* left:-15px; */
 }
